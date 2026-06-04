@@ -27,19 +27,19 @@ public class Limpieza extends Producto implements Descontable {
     // Tip: los campos de Producto son private — use los métodos de acceso heredados.
     @Override
     public double precioFinal() {
+
         
         
         double total = getPrecioBase() * getCantidad() * 1.13 - aplicarDescuento();
         return total;
-        
         
     }
 
     // ABSTRACCIÓN / INTERFACE: implementa el contrato de Descontable.
     @Override
     public double aplicarDescuento() {
-        // TODO: monto que se descuenta al subtotal
-        return 0;
+        return getPrecioBase() * getCantidad() * porcentajeDescuento;
+        
     }
 
     // ENCAPSULAMIENTO: setter con validación — el objeto controla su propio estado.
