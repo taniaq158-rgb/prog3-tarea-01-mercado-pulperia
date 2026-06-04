@@ -20,15 +20,19 @@ public class Limpieza extends Producto implements Descontable {
     // HERENCIA: super(...) delega los atributos comunes a Producto.
     public Limpieza(String nombre, double precioBase, int cantidad, double porcentajeDescuento) {
         super(nombre, precioBase, cantidad);
-        // TODO: inicializar el atributo de descuento
+        this.porcentajeDescuento = porcentajeDescuento;
     }
 
     // ABSTRACCIÓN: contrato que Producto obliga a cada subclase a definir.
     // Tip: los campos de Producto son private — use los métodos de acceso heredados.
     @Override
     public double precioFinal() {
-        // TODO: precio con IVA 13%, menos el descuento
-        return 0;
+        
+        
+        double total = getPrecioBase() * getCantidad() * 1.13 - aplicarDescuento();
+        return total;
+        
+        
     }
 
     // ABSTRACCIÓN / INTERFACE: implementa el contrato de Descontable.
