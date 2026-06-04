@@ -24,8 +24,14 @@ public class Mercado {
      * Use totalCarrito como guía de recorrido.
      */
     public static Producto masCaro(Producto[] carrito) {
-        // TODO: recorra guardando el Producto con mayor precioFinal() visto hasta ahora
-        return null;
+        Producto masCaro = carrito[0];
+        for (Producto p : carrito) {
+            if (p.precioFinal() > masCaro.precioFinal()) {
+                masCaro = p;
+            }
+        }
+        return masCaro;
+        
     }
 
     /**
@@ -33,8 +39,14 @@ public class Mercado {
      * Misma estructura que masCaro, pero busca el mínimo.
      */
     public static Producto masBarato(Producto[] carrito) {
-        // TODO: misma lógica que masCaro, condición invertida
-        return null;
+        Producto masBarato = carrito[0];
+        for (Producto p : carrito) {
+            if (p.precioFinal() < masBarato.precioFinal()) {
+                masBarato = p;
+            }
+        }
+        return masBarato;
+       
     }
 
     /**
@@ -45,8 +57,13 @@ public class Mercado {
      * cada clase que implementa la interface define de forma diferente.
      */
     public static double totalDescuentos(Producto[] carrito) {
-        // TODO: si p instanceof Descontable → cast → sumar aplicarDescuento()
-        //   Pista: Descontable d = (Descontable) p;
-        return 0;
+          double total = 0;
+        for (Producto p : carrito) {
+            if (p instanceof Descontable) {
+                Descontable d = (Descontable) p;
+                total += d.aplicarDescuento();
+            }
+        }
+        return total;
     }
 }
