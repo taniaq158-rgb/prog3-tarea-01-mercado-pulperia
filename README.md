@@ -224,3 +224,9 @@ En Windows puede usar clic derecho → Comprimir.
 
 Suba el `.zip` al aula virtual antes del **8 de junio de 2026**.
 Opcionalmente puede adjuntar también el link a su fork de GitHub.
+
+
+## Explicación de la solución
+
+Se completó la clase Limpieza, que hereda de Producto e implementa la interfaz Descontable. Se implementaron los métodos precioFinal(), aplicarDescuento(), setPorcentajeDescuento() y los métodos sobrecargados promo(). Se completaron los métodos masCaro(), masBarato() y totalDescuentos() en la clase Mercado.
+
