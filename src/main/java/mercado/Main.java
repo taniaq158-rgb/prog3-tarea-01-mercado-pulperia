@@ -71,7 +71,7 @@ public class Main {
         //   3. Descomente el bloque de abajo — debería compilar sin errores.
         // =======================================================
 
-        /*
+        
         System.out.println("\n=== ZONA TAREA ===");
 
         // HERENCIA + ABSTRACCIÓN: el carrito mezcla tipos distintos bajo Producto
@@ -107,6 +107,6 @@ public class Main {
         System.out.println("Más caro        : " + Mercado.masCaro(carritoTarea).getNombre());
         System.out.println("Más barato      : " + Mercado.masBarato(carritoTarea).getNombre());
         System.out.println("Total descuentos: ₡" + Mercado.totalDescuentos(carritoTarea));
-        */
+        
     }
 }

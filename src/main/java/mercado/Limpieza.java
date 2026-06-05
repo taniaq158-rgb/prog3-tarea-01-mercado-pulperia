@@ -57,7 +57,7 @@ public class Limpieza extends Producto implements Descontable {
 
 public void promo(boolean conEtiqueta) {
     if (conEtiqueta) {
-        System.out.println("[PROMOCIÓN ESPECIAL]");
+        System.out.println("[Promo especial]");
         promo();
     } else {
         promo();
