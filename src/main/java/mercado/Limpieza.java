@@ -49,4 +49,21 @@ public class Limpieza extends Producto implements Descontable {
         System.out.println("Descuento inválido: " + pct);
     }
 }
+    public void promo() {
+    System.out.println("Promoción: " + getNombre()
+            + " con descuento de "
+            + (porcentajeDescuento * 100) + "%");
 }
+
+public void promo(boolean conEtiqueta) {
+    if (conEtiqueta) {
+        System.out.println("[PROMOCIÓN ESPECIAL]");
+        promo();
+    } else {
+        promo();
+    }
+}
+    
+    
+}
+
