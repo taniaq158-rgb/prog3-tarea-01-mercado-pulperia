@@ -42,11 +42,11 @@ public class Limpieza extends Producto implements Descontable {
         
     }
 
-    // ENCAPSULAMIENTO: setter con validación — el objeto controla su propio estado.
-    // TODO: implementar setPorcentajeDescuento(double pct)
-    //   Solo acepte valores en el rango válido para un porcentaje; informe si el valor es rechazado.
-
-    // OVERLOADING: misma operación, distinto contrato.
-    // TODO: agregar promo() y promo(boolean conEtiqueta)
-    //   Una versión imprime la promoción básica; la otra puede mostrar información adicional.
+    public void setPorcentajeDescuento(double pct) {
+    if (pct >= 0 && pct <= 1) {
+        this.porcentajeDescuento = pct;
+    } else {
+        System.out.println("Descuento inválido: " + pct);
+    }
+}
 }
